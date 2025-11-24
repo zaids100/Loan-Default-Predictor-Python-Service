@@ -2,8 +2,8 @@ from fastapi import FastAPI
 import joblib
 import numpy as np
 
-model = joblib.load("./Model/loan_default_model.pkl")
-scaler = joblib.load("./Model/scaler.pkl")
+model = joblib.load("loan_default_model.pkl")
+scaler = joblib.load("scaler.pkl")
 
 app = FastAPI()
 
