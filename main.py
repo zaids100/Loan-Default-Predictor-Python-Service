@@ -23,6 +23,13 @@ class PredictionRequest(BaseModel):
     HasDependents: int
     HasCoSigner: int
 
+@app.get("/")
+def hello():
+    return {
+            "success": True,
+            "message": "Hello From Server"
+        }
+
 @app.post("/predict")
 def predict(data: PredictionRequest):
     try:
